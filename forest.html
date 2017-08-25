@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="assets/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene fog="type: linear; near: 2; far: 25; color: white" class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+        <a-entity light="type: hemisphere; color: #FFF; groundColor: #000; intensity: 1.9" position="" rotation="" scale="" visible=""></a-entity>
+        <a-plane rotation="-90 0 0" position="0 -.2 0" color="#94a550" height="100" width="100" scale="" visible="" material="" geometry=""></a-plane>
+        <a-sky src="green" position="" rotation="" scale="" visible="" material="" geometry=""></a-sky>
+        <a-collada-model scale="2.0 2.15 2.0" rotation=" 0 70 0" src="assets/models/forest/trees.dae" position="0 -0.09 0" visible="" collada-model=""> </a-collada-model>
+        <a-entity position="0 0 -2" rotation="0 0 0" scale="" visible="">
+            <a-animation attribute="rotation" to="0 -360 0" dur="4000" fill="forwards" ease-in-out-cubic="" repeat="indefinite">
+            </a-animation>
+            <a-collada-model scale=".25 .3 .25" rotation=" 1 -80 -5" src="assets/models/forest/otherpizza.dae" position="0 0 0" sound="src: assets/models/forest/sound.wav; autoplay: true; volume : .1 " visible="" collada-model="">
+            </a-collada-model>
+        </a-entity>
+        <a-entity position="30 10 30" rotation="0 0 0" scale="" visible="">
+            <a-light color="orange" intensity=".4" position="" rotation="" scale="" visible="" light="">
+            </a-light>
+        </a-entity>
+        <a-camera></a-camera>
+        <a-entity position="" data-aframe-default-camera="" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible=""></a-entity>
+    </a-scene>
+</body>
+
+</html>

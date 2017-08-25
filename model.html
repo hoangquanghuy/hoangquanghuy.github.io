@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="assets/aframe.min.js"></script>
+    <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.11.2/dist/aframe-extras.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="tree" src="assets/models/tree1.dae"></a-asset-item>
+            <a-asset-item id="car1" src="assets/models/robot.gltf"></a-asset-item>
+            <a-asset-item id="deer" src="assets/models/deer.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity position="-10 0.2 -10" rotation="" scale="" visible="">
+          <a-collada-model src="#tree" scale="2.5 2.5 2.5" visible="false" position="" rotation="" collada-model="">
+            <a-animation attribute="position" from="0 10 0" to="0 0 0" delay="650" dur="800" easing="ease-out" fill="backwards"></a-animation>
+            <a-animation attribute="visible" to="true" delay="800" dur="1"></a-animation>
+          </a-collada-model>
+        </a-entity>
+
+        <a-entity gltf-model="#car1" position="1 1 -1"></a-entity>
+        <a-entity gltf-model="#deer" position="2 2 -1"></a-entity>
+        <a-sky color="#ccc"></a-sky>
+    </a-scene>
+</body>
+
+</html>
